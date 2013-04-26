@@ -211,7 +211,7 @@ static inline void MSM_HDMI_MODES_INIT_TIMINGS(
 	int i;
 
 	for (i = 0; i < HDMI_VFRMT_MAX; i++) {
-		struct msm_hdmi_mode_timing_info mode = VFRMT_NOT_SUPPORTED(i);
+		struct msm_hdmi_mode_timing_info mode = VFRMT_NOT_SUPPORTED(static_cast<uint32>(i));
 		lut[i] = mode;
 	}
 }
